@@ -1,10 +1,7 @@
-set nocompatible
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -14,7 +11,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'w0rp/ale'
+Plug 'airblade/vim-rooter'
+Plug 'mattn/emmet-vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'tpope/vim-commentary'
+
+" Deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Most syntax plugins, in one
 Plug 'sheerun/vim-polyglot'

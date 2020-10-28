@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/noah/Projects/afungusbot'
+let g:netrw_dirhistcnt =1
 let g:netrw_dirhist_1='/home/noah/.config/nvim'
+let g:netrw_dirhist_0='/home/noah/Projects/afungusbot/cogs'
+let g:netrw_dirhist_9='/home/noah/Projects/afungusbot'
+let g:netrw_dirhist_8='/home/noah/Projects/afungusbot/.git'
+let g:netrw_dirhist_7='/home/noah/Projects/afungusbot'
+let g:netrw_dirhist_6='/home/noah/.config'
+let g:netrw_dirhist_5='/home/noah/.config/nvim'
+let g:netrw_dirhist_4='/home/noah/Projects/afungusbot'
+let g:netrw_dirhist_3='/home/noah/Projects/afungusbot/cogs'
+let g:netrw_dirhist_2='/home/noah/Projects/afungusbot'

@@ -1,8 +1,9 @@
-" Use plug.vim for plugin management
-source $HOME/.config/nvim/plugins.vim
+set nocompatible
 
-" Use mappings.vim for keybinding management
+" Sourcing
+source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/omnisharp.vim
 
 "" General
 set number	" Show line numbers
@@ -24,19 +25,19 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
 
+"" Deoplete configuration
+let g:deoplete#enable_at_startup = 1
+
+"" Nord configuration
 colorscheme nord
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
-
-let g:python_highlight_all = 1
-
-" Set lightline colorscheme to nord
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
 
-" Open NERDTree if no file specified
+"" NERDTree configuration
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

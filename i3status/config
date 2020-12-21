@@ -1,0 +1,28 @@
+general {
+        colors = true
+        interval = 5
+        separator = ""
+}
+
+order += "time"
+# order += "disk /"
+# order += "memory"
+order += "load"
+
+load {
+        format = " Load: %5min% "
+}
+
+memory {
+        format = " Memory: %percentage_used "
+        threshold_degraded = "10%"
+        format_degraded = " Memory: %percentage_free "
+}
+
+disk "/" {
+        format = " %free free storage " 
+}
+
+time {
+        format = " %Y-%m-%d %I:%M %p "
+}

@@ -3,10 +3,11 @@ set nocompatible
 " Sourcing
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/omnisharp.vim
+source $HOME/.config/nvim/plug-config/coc.vim
+
 
 "" General
-set number	" Show line numbers
+set number relativenumber
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
 set textwidth=80	" Line wrap (number of cols)
@@ -26,16 +27,12 @@ set smarttab	" Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
 
 "" Deoplete configuration
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-"" Nord configuration
-colorscheme nord
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ }
+"" Colorscheme
+colorscheme snazzy
+let g:lightline = {'colorscheme': 'snazzy'}
 
 "" NERDTree configuration
 autocmd StdinReadPre * let s:std_in=1

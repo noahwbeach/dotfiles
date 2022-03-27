@@ -1,0 +1,14 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+    "svelte.enable-ts-plugin": true,
+    // "languageserver": {
+    //     "haskell": {
+    //         "command": "haskell-language-server-wrapper",
+    //         "args": ["--lsp"],
+    //         "rootPatterns": ["*.cabal", "stack.yml", "cabal.project", "package.yaml", "hie.yaml"],
+    //         "filetypes": ["haskell", "lhaskell"]
+    //     }
+    // }
+}

@@ -99,12 +99,9 @@ fi
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias nvimconfig="nvim ~/.config/nvim"
 alias dog="cat"
 alias bc="bc -q"
-
-crun() {
-    gcc "$1" && ./a.out && rm ./a.out
-}
 
 # eval "$(starship init zsh)"
 

@@ -97,13 +97,17 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias config='/usr/bin/git --git-dir=/home/noah/.cfg/ --work-tree=/home/noah'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nvimconfig="nvim ~/.config/nvim"
 alias dog="cat"
 alias bc="bc -q"
 
+# TODO: Please get this done
+alias please='_ $(!!)'
+
 # eval "$(starship init zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/go/bin:$PATH"
-alias config='/usr/bin/git --git-dir=/home/noah/.cfg/ --work-tree=/home/noah'
+

@@ -32,6 +32,10 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'phaazon/hop.nvim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 " Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-commentary'

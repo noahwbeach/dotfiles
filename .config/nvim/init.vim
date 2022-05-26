@@ -3,8 +3,8 @@ set termguicolors
 
 " Sourcing
 source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/lsp.vim
+source $HOME/.config/nvim/mappings.vim
 " source $HOME/.config/nvim/plug-config/coc.vim
 
 
@@ -40,7 +40,7 @@ set softtabstop=4	" Number of spaces per Tab
 "     \ 'style': 'warmer',
 " \}
 
-colorscheme kanagawa
+colorscheme nightfox
 " let g:lightline = {'colorscheme': 'substrata'}
 
 "" NERDTree configuration
@@ -59,10 +59,18 @@ autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 autocmd FileType pug setlocal shiftwidth=2 softtabstop=2
 autocmd FileType svelte setlocal shiftwidth=2 softtabstop=2
+autocmd FileType go setlocal autoindent noexpandtab tabstop=4 shiftwidth=4 
 
 set nowrap
 
 lua << END
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
+}
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -100,3 +108,5 @@ END
 " require("indent_blankline").setup {
 "     space_char_blankline = " ",
 " }
+
+let g:go_def_mapping_enabled = 0

@@ -1,0 +1,46 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Get secrets from .env
+if [ -f $HOME/.env ]; then
+    . $HOME/.env
+fi
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias bedit='sudo vim /sys/class/backlight/amdgpu_bl1/brightness'
+alias b='thorium'
+
+function rc() {
+	cd $HOME/dotfiles &> /dev/null
+	vim $HOME/dotfiles/$1
+	make &> /dev/null
+	cd - &> /dev/null
+}
+
+function nvimrc() { rc 'nvim/dot-config/nvim'; }
+function vimrc() { rc 'dots/dot-vimrc'; }
+function bashrc() { rc 'dots/dot-bashrc'; }
+
+PS1='[\u@\h \W]\$ '
+
+xset r rate 300 50
+setxkbmap -option caps:escape
+. "$HOME/.cargo/env"
+
+export FLYCTL_INSTALL="/home/noah/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+export CUDA_VISIBLE_DEVICES=0
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+export NOTES_DIR="$HOME/notes"

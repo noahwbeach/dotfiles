@@ -1,0 +1,41 @@
+" Configuration
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set rtp +=/usr/share/fzf
+set t_Co=256
+set nocp
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+" Colors and files
+filetype plugin  on
+colo habamax
+filetype on
+syntax on
+
+" Keymaps
+nnoremap <leader>ni :e $NOTES_DIR/index.md<CR>:cd $NOTES_DIR<CR>
+vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
+nnoremap <C-p> :FZF<Cr>
+nnoremap <C-n> :Ex<Cr>
+nnoremap <C-g> :grep 
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+let mapleader = '\'
+
+" Autocommands
+autocmd filetype svelte set ft=html
+autocmd filetype html set shiftwidth=2 |
+                    \ set softtabstop=2 |
+                    \ set tabstop=2
+
+" Vim-Plug
+call plug#begin()
+
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Thyrum/vim-stabs'
+
+call plug#end()
